@@ -1,12 +1,14 @@
 const donateBtn = document.getElementById('btn-donate');
+const modal = document.getElementById('modal');
+const closeBtn = document.getElementById('close-btn');
+
 donateBtn.onclick = ()=>{
     const history = document.getElementById('history');
     const titleValue = getTitleValue('title1');
     const inputValue = getInputValue('amount-input');
     const mainBalance = getTextValue('balance');
     const collectBalance = getTextValue('collect-balance');
-    const modal = document.getElementById('modal');
-    const closeBtn = document.getElementById('close-btn');
+    
     const donateBalance = mainBalance - inputValue;
     const addBalance = collectBalance + inputValue;
 
@@ -23,8 +25,6 @@ donateBtn.onclick = ()=>{
     modal.classList.add('hidden')
    }
     
-
-
     document.getElementById('collect-balance').innerText = addBalance;
     document.getElementById('balance').innerText = donateBalance;
     document.getElementById('amount-input').value = '';
@@ -47,6 +47,11 @@ donateBtn2.onclick = ()=>{
     div.classList.add('border', 'p-3' ,'rounded-xl',)
 
     history.appendChild(div);
+
+    modal.classList.remove('hidden');
+    closeBtn.onclick = function(){
+    modal.classList.add('hidden')
+   }
     
     document.getElementById('card-balance1').innerText = addBalance;
     document.getElementById('balance').innerText = donateBalance;
@@ -71,6 +76,11 @@ donateBtn3.onclick = ()=>{
     `;
     div.classList.add('border', 'p-3' ,'rounded-xl',)
     history.appendChild(div);
+
+    modal.classList.remove('hidden');
+    closeBtn.onclick = function(){
+    modal.classList.add('hidden')
+   }
     
     document.getElementById('card-balance3').innerText = addBalance;
     document.getElementById('balance').innerText = donateBalance;
