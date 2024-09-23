@@ -8,26 +8,44 @@ donateBtn.onclick = ()=>{
     const inputValue = getInputValue('amount-input');
     const mainBalance = getTextValue('balance');
     const collectBalance = getTextValue('collect-balance');
-    
-    const donateBalance = mainBalance - inputValue;
-    const addBalance = collectBalance + inputValue;
+      
+    if (!inputValue) {
+      alert('Input is blank.');
+      return
+  }
+  if (isNaN(inputValue)) {
+      alert('Input is not a number.');
+      return;
+  }
+  if (inputValue > mainBalance) {
+      alert('Invalid input. Amount is gater then available balance.');
+      return;
+  }
+  if (inputValue < 0) {
+      alert('Invalid input. input is negative.');
+      return;
+  }
 
-    const div = document.createElement('div');
-    div.innerHTML = `
-      <h2 class="text-xl mb-2 font-semibold">${inputValue} Taka is ${titleValue}</h2>
-      <p class="text-black">Date: ${new Date().toLocaleDateString()}, time: ${new Date().toLocaleTimeString()}</p>
-    `;
-    div.classList.add('mt-10', 'border', 'p-3' ,'rounded-xl',)
-    history.appendChild(div);
-
-    modal.classList.remove('hidden');
-    closeBtn.onclick = function(){
-    modal.classList.add('hidden')
-   }
-    
-    document.getElementById('collect-balance').innerText = addBalance;
-    document.getElementById('balance').innerText = donateBalance;
-    document.getElementById('amount-input').value = '';
+      const donateBalance = mainBalance - inputValue;
+      const addBalance = collectBalance + inputValue;
+  
+      const div = document.createElement('div');
+      div.innerHTML = `
+        <h2 class="text-xl mb-2 font-semibold">${inputValue} Taka is ${titleValue}</h2>
+        <p class="text-black">Date: ${new Date().toLocaleDateString()}, time: ${new Date().toLocaleTimeString()}</p>
+      `;
+      div.classList.add('mt-10', 'border', 'p-3' ,'rounded-xl',)
+      history.appendChild(div);
+  
+      modal.classList.remove('hidden');
+      closeBtn.onclick = function(){
+      modal.classList.add('hidden')
+     
+      
+      document.getElementById('collect-balance').innerText = addBalance;
+      document.getElementById('balance').innerText = donateBalance;
+      document.getElementById('amount-input').value = '';
+    }
 }
 const donateBtn2 = document.getElementById('donate-btn2');
 donateBtn2.onclick = ()=>{
@@ -36,6 +54,24 @@ donateBtn2.onclick = ()=>{
     const mainBalance = getTextValue('balance');
     const collectBalance = getTextValue('card-balance1');
     const titleValue = getTitleValue('title2');
+
+      if (!inputValue) {
+        alert('Input is blank.');
+        return
+    }
+    if (isNaN(inputValue)) {
+        alert('Input is not a number.');
+        return;
+    }
+    if (inputValue > mainBalance) {
+        alert('Invalid input. Amount is gater then available balance.');
+        return;
+    }
+    if (inputValue < 0) {
+        alert('Invalid input. input is negative.');
+        return;
+    };
+
     const donateBalance = mainBalance - inputValue;
     const addBalance = collectBalance + inputValue;
 
@@ -66,6 +102,24 @@ donateBtn3.onclick = ()=>{
     const mainBalance = getTextValue('balance');
     const collectBalance = getTextValue('card-balance3');
     const titleValue = getTitleValue('title3');
+
+    if (!inputValue) {
+      alert('Input is blank.');
+      return
+  }
+  if (isNaN(inputValue)) {
+      alert('Input is not a number.');
+      return;
+  }
+  if (inputValue > mainBalance) {
+      alert('Invalid input. Amount is gater then available balance.');
+      return;
+  }
+  if (inputValue < 0) {
+      alert('Invalid input. input is negative.');
+      return;
+  }
+
     const donateBalance = mainBalance - inputValue;
     const addBalance = collectBalance + inputValue;
 
