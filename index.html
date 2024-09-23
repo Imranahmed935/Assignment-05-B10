@@ -17,7 +17,7 @@
             </div>
             <div class="flex items-center gap-2 mt-4 lg:ml-0 ml-32 bg-[#e9f8d5] w-40 p-2 rounded">
                 <div><img src="./assets/coin.png" alt=""></div>
-                 <div class="text-xl font-semibold "><span class="mr-2">10000</span>BDT</div>
+                 <div class="text-xl font-semibold "><span id="balance" class="mr-2">10000</span>BDT</div>
             </div>
         </nav>
         <div class="mt-20 flex justify-center items-center gap-10">
@@ -33,16 +33,16 @@
                 <div class="lg:w-1/2">
                     <div class="flex items-center gap-2 lg:mt-4 mt-6">
                         <img src="./assets/coin.png" alt="">
-                        <span>0</span>
+                        <span id="collect-balance">0</span>
                         <p>BDT</p>
                     </div>
                     <div class="">
                         <h1 class="text-2xl font-bold lg:mt-6 mt-2">Donate for Flood at Noakhali, Bangladesh</h1>
                         <p class="mt-4 text-justify"> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
 
-                        <input class="lg:mt-10 mt-4 mb-4 bg-gray-100 w-full p-2 text-xl rounded" type="text" placeholder="write your amount">
+                        <input id="amount-input" class="lg:mt-10 mt-4 mb-4 bg-gray-100 w-full p-2 text-xl rounded" type="text" placeholder="write your amount">
                         <br>
-                        <button class="btn bg-[#B4F461] w-full text-xl font-semibold lg:mt-10 outline-none ">Donate Now</button>
+                        <button id="btn-donate" class="btn bg-[#B4F461] w-full text-xl font-semibold lg:mt-10 outline-none ">Donate Now</button>
                     </div>
                 </div>
             </section>
@@ -53,16 +53,16 @@
                 <div class="lg:w-1/2">
                     <div class="flex items-center gap-2 lg:mt-4 mt-6">
                         <img src="./assets/coin.png" alt="">
-                        <span>500</span>
+                        <span id="card-balance1">500</span>
                         <p>BDT</p>
                     </div>
                     <div class="">
                         <h1 class="text-2xl font-bold lg:mt-6 mt-2">Donate for Flood Relief in Feni,Bangladesh</h1>
                         <p class="mt-4 text-justify"> The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.</p>
 
-                        <input class="lg:mt-10 mt-4 mb-4 bg-gray-100 w-full p-2 text-xl rounded" type="text" placeholder="write your amount">
+                        <input id="amount-input2" class="lg:mt-10 mt-4 mb-4 bg-gray-100 w-full p-2 text-xl rounded" type="text" placeholder="write your amount">
                         <br>
-                        <button class="btn bg-[#B4F461] w-full text-xl font-semibold lg:mt-10 outline-none ">Donate Now</button>
+                        <button id="donate-btn2" class="btn bg-[#B4F461] w-full text-xl font-semibold lg:mt-10 outline-none ">Donate Now</button>
                     </div>
                 </div>
             </section>
@@ -86,5 +86,9 @@
                 </div>
             </section>
     </main>
+
+
+    <script src="./js/utilitise.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 </html>
