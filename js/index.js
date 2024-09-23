@@ -1,17 +1,6 @@
 const donateBtn = document.getElementById('btn-donate');
 const modal = document.getElementById('modal');
 const closeBtn = document.getElementById('close-btn');
-// const homeBtn = document.getElementById('Home-btn');
-// const blogBtn = document.getElementById('Blog-btn');
-
-// blogBtn.onclick =()=>{
-//   homeBtn.classList.remove('hidden');
-//   blogBtn.classList.add('hidden');
-// }
-// homeBtn.onclick =()=>{
-//   homeBtn.classList.add('hidden');
-//   blogBtn.classList.remove('hidden');
-// }
 
 donateBtn.onclick = ()=>{
     const history = document.getElementById('history');
@@ -21,7 +10,7 @@ donateBtn.onclick = ()=>{
     const collectBalance = getTextValue('collect-balance');
       
     if (!inputValue) {
-      alert('Input is blank.');
+      alert('Invalid Input.');
       return
   }
   if (isNaN(inputValue)) {
@@ -67,7 +56,7 @@ donateBtn2.onclick = ()=>{
     const titleValue = getTitleValue('title2');
 
       if (!inputValue) {
-        alert('Input is blank.');
+        alert('Invalid Input.');
         return
     }
     if (isNaN(inputValue)) {
@@ -115,7 +104,7 @@ donateBtn3.onclick = ()=>{
     const titleValue = getTitleValue('title3');
 
     if (!inputValue) {
-      alert('Input is blank.');
+      alert('Invalid Input.');
       return
   }
   if (isNaN(inputValue)) {
