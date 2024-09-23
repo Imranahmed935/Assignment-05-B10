@@ -8,7 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <header class="max-w-screen-xl mx-auto lg:mt-10 mt-4 px-2">
+    <header class="max-w-screen-xl mx-auto lg:mt-10 mt-4 px-2 sticky pb-4 bg-white top-0">
         <nav class="lg:flex justify-around items-center text-end">
             <div><button class="btn bg-[#B4F461] text-xl text-black font-bold">Blog</button></div>
             <div class="flex items-center gap-2 lg:mt-2 -mt-12">
@@ -20,12 +20,12 @@
                  <div class="text-xl font-semibold "><span id="balance" class="mr-2">10000</span>BDT</div>
             </div>
         </nav>
-        <div class="mt-20 flex justify-center items-center gap-10">
-            <button id="donation-btn" class="btn bg-[#B4F461] text-xl font-bold hover:bg-white hover:text-black">Donation</button>
-            <button id="history-btn" class="btn btn-outline bg-primary-400 text-xl font-bold hover:bg-white hover:text-black">History</button>
+        <div class="lg:mt-20 mt-10 flex justify-center items-center gap-10">
+            <button id="donation-btn" class="btn bg-[#B4F461] text-xl font-bold lg:hover:bg-white lg:hover:text-black">Donation</button>
+            <button id="history-btn" class="btn btn-outline bg-primary-400 text-xl font-bold">History</button>
         </div>
     </header>
-    <main id="card-container" class="max-w-screen-xl mx-auto lg:mt-32 mt-4 px-2">
+    <main id="card-container" class="max-w-screen-xl mx-auto lg:border lg:rounded-xl lg:mt-32 mt-4 px-2">
             <section class="lg:flex items-center gap-2 p-4">
                 <div class="lg:w-1/2 ">
                     <div><img src="./assets/noakhali.png" class="lg:w-11/12 w-full"  alt=""></div>
@@ -37,7 +37,7 @@
                         <p>BDT</p>
                     </div>
                     <div class="">
-                        <h1 class="text-2xl font-bold lg:mt-6 mt-2">Donate for Flood at Noakhali, Bangladesh</h1>
+                        <h1 id="title1" class="text-2xl font-bold lg:mt-6 mt-2">Donate for Flood at Noakhali, Bangladesh</h1>
                         <p class="mt-4 text-justify"> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
 
                         <input id="amount-input" class="lg:mt-10 mt-4 mb-4 bg-gray-100 w-full p-2 text-xl rounded" type="text" placeholder="write your amount">
@@ -57,7 +57,7 @@
                         <p>BDT</p>
                     </div>
                     <div class="">
-                        <h1 class="text-2xl font-bold lg:mt-6 mt-2">Donate for Flood Relief in Feni,Bangladesh</h1>
+                        <h1 id="title2" class="text-2xl font-bold lg:mt-6 mt-2">Donate for Flood Relief in Feni,Bangladesh</h1>
                         <p class="mt-4 text-justify"> The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.</p>
 
                         <input id="amount-input2" class="lg:mt-10 mt-4 mb-4 bg-gray-100 w-full p-2 text-xl rounded" type="text" placeholder="write your amount">
@@ -77,7 +77,7 @@
                         <p>BDT</p>
                     </div>
                     <div class="">
-                        <h1 class="text-2xl font-bold lg:mt-6 mt-2">Aid for Injured in the Quota Movement</h1>
+                        <h1 id="title3" class="text-2xl font-bold lg:mt-6 mt-2">Aid for Injured in the Quota Movement</h1>
 
                         <input id="amount-input3" class="lg:mt-10 mt-4 mb-4 bg-gray-100 w-full p-2 text-xl rounded" type="text" placeholder="write your amount">
                         <br>
@@ -87,8 +87,21 @@
             </section>
           
     </main>
-    <section id="donation-history" class="max-w-screen-xl mx-auto lg:mt-32 mt-4 px-2 hidden">
+    <section id="donation-history" class="max-w-screen-xl mx-auto lg:mt-20 mt-2 px-2 hidden">
             <h1 class="text-xl font-bold">Donation History</h1>
+            <div id="history" class="space-y-2">
+
+            </div>
+    </section>
+
+    <section id="modal" class="hidden fixed top-0 bg-black bg-opacity-40 w-full h-screen space-y-4">
+        <div class="space-y-4 bg-white absolute top-[300px] left-[700px] text-center p-4 lg:w-3/12 mx-auto rounded">
+            <h1 class="text-5xl font-bold text-black">Congrates!</h1>
+            <img class="ml-56" src="./assets/coin.png" alt="">
+            <p class="text-xl">you have donated for Humankind.</p>
+            <p class="text-2xl text-green-500 font-bold">Successfully</p>
+            <button id="close-btn" class="btn btn-error text-xl">Close Confirmation</button>
+        </div>
     </section>
       
 
