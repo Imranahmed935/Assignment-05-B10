@@ -21,8 +21,8 @@
             </div>
         </nav>
         <div class="mt-20 flex justify-center items-center gap-10">
-            <button class="btn bg-[#B4F461] text-xl font-bold">Donation</button>
-            <button class="btn btn-outline bg-primary-400 text-xl font-bold">History</button>
+            <button id="donation-btn" class="btn bg-[#B4F461] text-xl font-bold hover:bg-white hover:text-black">Donation</button>
+            <button id="history-btn" class="btn btn-outline bg-primary-400 text-xl font-bold hover:bg-white hover:text-black">History</button>
         </div>
     </header>
     <main id="card-container" class="max-w-screen-xl mx-auto lg:mt-32 mt-4 px-2">
@@ -73,19 +73,24 @@
                 <div class="lg:w-1/2">
                     <div class="flex items-center gap-2 lg:mt-4 mt-6">
                         <img src="./assets/coin.png" alt="">
-                        <span>1000</span>
+                        <span id="card-balance3">1000</span>
                         <p>BDT</p>
                     </div>
                     <div class="">
                         <h1 class="text-2xl font-bold lg:mt-6 mt-2">Aid for Injured in the Quota Movement</h1>
 
-                        <input class="lg:mt-10 mt-4 mb-4 bg-gray-100 w-full p-2 text-xl rounded" type="text" placeholder="write your amount">
+                        <input id="amount-input3" class="lg:mt-10 mt-4 mb-4 bg-gray-100 w-full p-2 text-xl rounded" type="text" placeholder="write your amount">
                         <br>
-                        <button class="btn bg-[#B4F461] w-full text-xl font-semibold lg:mt-10 outline-none ">Donate Now</button>
+                        <button id="donate-btn3" class="btn bg-[#B4F461] w-full text-xl font-semibold lg:mt-10 outline-none ">Donate Now</button>
                     </div>
                 </div>
             </section>
+          
     </main>
+    <section id="donation-history" class="max-w-screen-xl mx-auto lg:mt-32 mt-4 px-2 hidden">
+            <h1 class="text-xl font-bold">Donation History</h1>
+    </section>
+      
 
 
     <script src="./js/utilitise.js"></script>
