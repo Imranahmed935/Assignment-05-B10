@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog About Donation</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header class="max-w-screen-2xl mx-auto lg:mt-10 mt-4 px-2 sticky pb-4 bg-white top-0">
+        <nav class="lg:flex justify-around items-center text-end">
+            <div>
+                <button id="Blog-btn" class="btn bg-[#B4F461] text-xl text-black font-bold"><a href="index.html">Home</a></button>
+            </div>
+            <div class="flex items-center gap-2 lg:mt-2 -mt-12">
+                <div><img class="w-full" src="./assets/logo.png" class="w-full" alt=""></div>
+                <h1 class="lg:text-3xl text-xl font-bold">Donate Bangladesh</h1>
+            </div>
+            <div class="flex items-center gap-2 mt-4 lg:ml-0 ml-32 bg-[#e9f8d5] w-40 p-2 rounded">
+                <div><img src="./assets/coin.png" alt=""></div>
+                 <div class="text-xl font-semibold "><span id="balance" class="mr-2">10000</span>BDT</div>
+            </div>
+        </nav>
+    </header>
+    <main class="max-w-screen-2xl mx-auto lg:mt-10 mt-4 px-2">
+        <h1 class="text-4xl font-bold lg:ml-48 lg:mt-20 mt-5">Important FAQ ?</h1>
+        <div class="lg:mt-20 lg:w-7/12 w-full lg:ml-48 mt-10 space-y-2 border lg:p-4 rounded">
+            <div class="collapse collapse-plus bg-base-200">
+                <input type="radio" name="my-accordion-3" checked="checked" />
+                <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
+                <div class="collapse-content">
+                  <p>The DOM is a programming interface for web documents. DOM represents the structure of an HTML document as a tree of objects. you can Modify text, attributes, or styles of HTML elements.Dynamically create or delete elements with the dom.</p>
+                </div>
+              </div>
+              <div class="collapse collapse-plus bg-base-200">
+                <input type="radio" name="my-accordion-3" />
+                <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
+                <div class="collapse-content">
+                  <p>using getElementById() method you can select an specific element from HTML.
+                  </p>
+                </div>
+              </div>
+              <div class="collapse collapse-plus bg-base-200">
+                <input type="radio" name="my-accordion-3" />
+                <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why is it useful?</div>
+                <div class="collapse-content">
+                  <p>Event delegation is a technique where a single event listener is attached to a parent element, allowing it to handle events from its children. This leverages event bubbling, improving performance by reducing the need for multiple listeners and supporting dynamic content added after the page loads.</p>
+                </div>
+              </div>
+              <div class="collapse collapse-plus bg-base-200">
+                <input type="radio" name="my-accordion-3" />
+                <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
+                <div class="collapse-content">
+                  <p>
+                    To manipulate DOM elements you can use getAttribute(), setAttribute(), or removeAttribute() for attributes, and style for inline styles or classList to add, remove, or toggle CSS classes.
+                  </p>
+                </div>
+              </div>
+        </div>
+    </main>
+</body>
+</html>

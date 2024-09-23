@@ -1,17 +1,17 @@
 const donateBtn = document.getElementById('btn-donate');
 const modal = document.getElementById('modal');
 const closeBtn = document.getElementById('close-btn');
-const homeBtn = document.getElementById('Home-btn');
-const blogBtn = document.getElementById('Blog-btn');
+// const homeBtn = document.getElementById('Home-btn');
+// const blogBtn = document.getElementById('Blog-btn');
 
-blogBtn.onclick =()=>{
-  homeBtn.classList.remove('hidden');
-  blogBtn.classList.add('hidden');
-}
-homeBtn.onclick =()=>{
-  homeBtn.classList.add('hidden');
-  blogBtn.classList.remove('hidden');
-}
+// blogBtn.onclick =()=>{
+//   homeBtn.classList.remove('hidden');
+//   blogBtn.classList.add('hidden');
+// }
+// homeBtn.onclick =()=>{
+//   homeBtn.classList.add('hidden');
+//   blogBtn.classList.remove('hidden');
+// }
 
 donateBtn.onclick = ()=>{
     const history = document.getElementById('history');
