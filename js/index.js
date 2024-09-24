@@ -1,51 +1,58 @@
 const donateBtn = document.getElementById('btn-donate');
 const modal = document.getElementById('modal');
 const closeBtn = document.getElementById('close-btn');
-
 donateBtn.onclick = ()=>{
     const history = document.getElementById('history');
     const titleValue = getTitleValue('title1');
     const inputValue = getInputValue('amount-input');
     const mainBalance = getTextValue('balance');
     const collectBalance = getTextValue('collect-balance');
-      
-    if (!inputValue) {
-      alert('Invalid Input.');
-      return
-  }
-  if (isNaN(inputValue)) {
-      alert('Input is not a number.');
-      return;
-  }
-  if (inputValue > mainBalance) {
-      alert('Invalid input. Amount is gater then available balance.');
-      return;
-  }
-  if (inputValue < 0) {
-      alert('Invalid input. input is negative.');
-      return;
-  }
 
-      const donateBalance = mainBalance - inputValue;
-      const addBalance = collectBalance + inputValue;
-  
-      const div = document.createElement('div');
-      div.innerHTML = `
-        <h2 class="text-xl mb-2 font-semibold">${inputValue} Taka is ${titleValue}</h2>
-        <p class="text-black">Date: ${new Date().toLocaleDateString()}, time: ${new Date().toLocaleTimeString()}</p>
-      `;
-      div.classList.add('mt-10', 'border', 'p-3' ,'rounded-xl',)
-      history.appendChild(div);
-  
-      modal.classList.remove('hidden');
-      closeBtn.onclick = function(){
-      modal.classList.add('hidden')
-     
+
+    function checkValid(number){
+        if(isNaN(number)){
+            alert("Invalid Input!")
+        return;
+        }else{
+          if (!inputValue) {
+            alert('Invalid Input!');
+            return
+        }
+         
+        if (inputValue > mainBalance) {
+          alert(' Amount is gater then available balance!');
+          return;
+        }
       
-      document.getElementById('collect-balance').innerText = addBalance;
-      document.getElementById('balance').innerText = donateBalance;
-      document.getElementById('amount-input').value = '';
-    }
+        if (inputValue < 0) {
+            alert('input is negative!');
+            return;
+        }
+      
+            const donateBalance = mainBalance - inputValue;
+            const addBalance = collectBalance + inputValue;
+        
+            const div = document.createElement('div');
+            div.innerHTML = `
+              <h2 class="text-xl mb-2 font-semibold">${inputValue} Taka is ${titleValue}</h2>
+              <p class="text-black">Date: ${new Date().toLocaleDateString()}, time: ${new Date().toLocaleTimeString()}</p>
+            `;
+            div.classList.add('mt-10', 'border', 'p-3' ,'rounded-xl',)
+            history.appendChild(div);
+        
+            modal.classList.remove('hidden');
+            closeBtn.onclick = function(){
+            modal.classList.add('hidden')
+           
+            
+            document.getElementById('collect-balance').innerText = addBalance;
+            document.getElementById('balance').innerText = donateBalance;
+            document.getElementById('amount-input').value = '';
+          }
+        }
+        }
+       checkValid(inputValue)
+
 }
 const donateBtn2 = document.getElementById('donate-btn2');
 donateBtn2.onclick = ()=>{
@@ -55,43 +62,48 @@ donateBtn2.onclick = ()=>{
     const collectBalance = getTextValue('card-balance1');
     const titleValue = getTitleValue('title2');
 
-      if (!inputValue) {
-        alert('Invalid Input.');
-        return
-    }
-    if (isNaN(inputValue)) {
-        alert('Input is not a number.');
-        return;
-    }
-    if (inputValue > mainBalance) {
+    function checkValid(number){
+      if(isNaN(number)){
+          alert("Invalid Input!")
+      return;
+      }else{
+        if (!inputValue) {
+          alert('Invalid Input.');
+          return
+      }
+       
+      if (inputValue > mainBalance) {
         alert('Invalid input. Amount is gater then available balance.');
         return;
-    }
-    if (inputValue < 0) {
-        alert('Invalid input. input is negative.');
-        return;
-    };
-
-    const donateBalance = mainBalance - inputValue;
-    const addBalance = collectBalance + inputValue;
-
-    const div = document.createElement('div');
-    div.innerHTML = `
-      <h2 class="text-xl mb-2 font-semibold">${inputValue} Taka is ${titleValue}</h2>
-      <p class="text-black">Date: ${new Date().toLocaleDateString()}, time: ${new Date().toLocaleTimeString()}</p>
-    `;
-    div.classList.add('border', 'p-3' ,'rounded-xl',)
-
-    history.appendChild(div);
-
-    modal.classList.remove('hidden');
-    closeBtn.onclick = function(){
-    modal.classList.add('hidden')
-   }
+      }
     
-    document.getElementById('card-balance1').innerText = addBalance;
-    document.getElementById('balance').innerText = donateBalance;
-    document.getElementById('amount-input2').value = '';
+      if (inputValue < 0) {
+          alert('input is negative.');
+          return;
+      }
+      const donateBalance = mainBalance - inputValue;
+      const addBalance = collectBalance + inputValue;
+  
+      const div = document.createElement('div');
+      div.innerHTML = `
+        <h2 class="text-xl mb-2 font-semibold">${inputValue} Taka is ${titleValue}</h2>
+        <p class="text-black">Date: ${new Date().toLocaleDateString()}, time: ${new Date().toLocaleTimeString()}</p>
+      `;
+      div.classList.add('border', 'p-3' ,'rounded-xl',)
+  
+      history.appendChild(div);
+  
+      modal.classList.remove('hidden');
+      closeBtn.onclick = function(){
+      modal.classList.add('hidden')
+     }
+      
+      document.getElementById('card-balance1').innerText = addBalance;
+      document.getElementById('balance').innerText = donateBalance;
+      document.getElementById('amount-input2').value = '';
+      }
+    }
+      checkValid(inputValue);
 }
 
 
@@ -103,42 +115,49 @@ donateBtn3.onclick = ()=>{
     const collectBalance = getTextValue('card-balance3');
     const titleValue = getTitleValue('title3');
 
-    if (!inputValue) {
-      alert('Invalid Input.');
-      return
-  }
-  if (isNaN(inputValue)) {
-      alert('Input is not a number.');
+    function checkValid(number){
+      if(isNaN(number)){
+          alert("Invalid Input!")
       return;
-  }
-  if (inputValue > mainBalance) {
-      alert('Invalid input. Amount is gater then available balance.');
-      return;
-  }
-  if (inputValue < 0) {
-      alert('Invalid input. input is negative.');
-      return;
-  }
+      }else{
+        if (!inputValue) {
+          alert('Invalid Input.');
+          return
+      }
+       
+      if (inputValue > mainBalance) {
+        alert('Invalid input. Amount is gater then available balance.');
+        return;
+      }
+  
+      if (inputValue < 0) {
+          alert('input is negative.');
+          return;
+      }
+      
+      const donateBalance = mainBalance - inputValue;
+      const addBalance = collectBalance + inputValue;
+  
+      const div = document.createElement('div');
+      div.innerHTML = `
+        <h2 class="text-xl mb-2 font-semibold">${inputValue} Taka is ${titleValue}</h2>
+        <p class="text-black">Date: ${new Date().toLocaleDateString()}, time: ${new Date().toLocaleTimeString()}</p>
+      `;
+      div.classList.add('border', 'p-3' ,'rounded-xl',)
+      history.appendChild(div);
+  
+      modal.classList.remove('hidden');
+      closeBtn.onclick = function(){
+      modal.classList.add('hidden')
+     }
+      
+      document.getElementById('card-balance3').innerText = addBalance;
+      document.getElementById('balance').innerText = donateBalance;
+      document.getElementById('amount-input3').value = '';
+      }
+    }
+    checkValid(inputValue);
 
-    const donateBalance = mainBalance - inputValue;
-    const addBalance = collectBalance + inputValue;
-
-    const div = document.createElement('div');
-    div.innerHTML = `
-      <h2 class="text-xl mb-2 font-semibold">${inputValue} Taka is ${titleValue}</h2>
-      <p class="text-black">Date: ${new Date().toLocaleDateString()}, time: ${new Date().toLocaleTimeString()}</p>
-    `;
-    div.classList.add('border', 'p-3' ,'rounded-xl',)
-    history.appendChild(div);
-
-    modal.classList.remove('hidden');
-    closeBtn.onclick = function(){
-    modal.classList.add('hidden')
-   }
-    
-    document.getElementById('card-balance3').innerText = addBalance;
-    document.getElementById('balance').innerText = donateBalance;
-    document.getElementById('amount-input3').value = '';
 }
 
 const historyBtn = document.getElementById('history-btn');
@@ -169,3 +188,9 @@ donationBtn.onclick=()=>{
 
    
 }
+    const blogBtn = document.getElementById('blog-btn'); 
+
+    blogBtn.onclick =()=>{
+        window.location.href = 'blog.html'
+    }
+
